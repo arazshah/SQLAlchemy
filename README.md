@@ -1,12 +1,13 @@
 # SQLAlchemy
-In this project, you'll build a library management system using SQLAlchemy and Python. This project will cover various SQLAlchemy features, including defining models, creating database tables, querying data, relationships, and more
+
+In this project, I'll build a library management system using SQLAlchemy and Python. This project will cover various SQLAlchemy features, including defining models, creating database tables, querying data, relationships, and more
 
 Creating a comprehensive SQLAlchemy tutorial video requires a real project that covers a wide range of concepts and best practices. Here's a project idea that can help you cover important aspects of SQLAlchemy:
 
 **Project: Library Management System**
 
 **Description:**
-In this project, you'll build a library management system using SQLAlchemy and Python. This project will cover various SQLAlchemy features, including defining models, creating database tables, querying data, relationships, and more. Here are the key features of the project:
+Here are the key features of the project:
 
 1. **Database Setup**:
    - Create a SQLite database using SQLAlchemy.
