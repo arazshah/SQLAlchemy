@@ -1,0 +1,120 @@
+[
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Table",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "CRUD",
+        "kind": 6,
+        "importPath": "control",
+        "description": "control",
+        "peekOfCode": "class CRUD:\n    def __init__(self,driver):\n        self.engine=",
+        "detail": "control",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "db",
+        "description": "db",
+        "peekOfCode": "engine = create_engine('sqlite:///library.db')",
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "Author",
+        "kind": 6,
+        "importPath": "model",
+        "description": "model",
+        "peekOfCode": "class Author(Base):\n    __tablename__ = 'authors'\n    id = Column(Integer, primary_key=True)\n    name = Column(String(length=25))\n    books = relationship('Book', secondary='Book_author')\nclass Book(Base):\n    __tablename__ = 'books'\n    id = Column(Integer, primary_key=True)\n    title = Column(String)\n    publication_year = Column(Integer)",
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "Book",
+        "kind": 6,
+        "importPath": "model",
+        "description": "model",
+        "peekOfCode": "class Book(Base):\n    __tablename__ = 'books'\n    id = Column(Integer, primary_key=True)\n    title = Column(String)\n    publication_year = Column(Integer)\nbook_author = Table('book_author', Base.metadata,\n                    Column('book_id', Integer, ForeignKey('books.id')),\n                    Column('author_id', Integer, ForeignKey('authors.id'))\n                    )",
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "model",
+        "description": "model",
+        "peekOfCode": "Base = declarative_base()\nclass Author(Base):\n    __tablename__ = 'authors'\n    id = Column(Integer, primary_key=True)\n    name = Column(String(length=25))\n    books = relationship('Book', secondary='Book_author')\nclass Book(Base):\n    __tablename__ = 'books'\n    id = Column(Integer, primary_key=True)\n    title = Column(String)",
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "book_author",
+        "kind": 5,
+        "importPath": "model",
+        "description": "model",
+        "peekOfCode": "book_author = Table('book_author', Base.metadata,\n                    Column('book_id', Integer, ForeignKey('books.id')),\n                    Column('author_id', Integer, ForeignKey('authors.id'))\n                    )",
+        "detail": "model",
+        "documentation": {}
+    }
+]
